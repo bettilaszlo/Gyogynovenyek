@@ -10,6 +10,9 @@ namespace Gyogynovenyek
     {
         static void Main(string[] args)
         {
+            var gy = new Noveny();
+            
+            Console.ReadKey();
         }
     }
 }
