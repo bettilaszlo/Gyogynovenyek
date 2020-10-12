@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.IO;
 
@@ -12,11 +13,25 @@ namespace Gyogynovenyek
         public int Veg { get; private set; }
         public int Idotartam { get; private set; }
 
-        static List<Noveny> lista = new List<Noveny>();
+        
         public Noveny(string adat)
         {
-            adat = "Acsalapu;levél;6;8";
+            string[] a = adat.Split(';');
+            Nev = a[0];
+            Resz = a[1];
+            Kezd = Convert.ToInt32(a[2]);
+            Veg = Convert.ToInt32(a[3]);
+
+            if (Veg > Kezd)
+            {
+                Idotartam = Veg - Kezd + 1;
+            }
+            else
+            {
+                Idotartam = 12 - Kezd + Veg + 1;
+            }
+
         }
-       
+
     }
 }

@@ -22,7 +22,7 @@
      - Konstruktorban számljuk 
      - Számolása: Vég - kezdet HA!!! Vég > Kezdet
      - Vég > Kezdet --> Vég - Kezdet + 1
-     - Egyébként: 12 - Vég + Kezdet + 1
+     - Egyébként: 12 - Kezdet + Vég + 1
 ## Adatok beolvasása és eltárolása
 - Listában tároljuk az objektum példányokat
 - Olvassuk be:
@@ -31,13 +31,30 @@
   - while ciklussal --> alíg tart a fájl
   - Cikluson belül listához hozzáadunk egy új objektum példányt (beolvasott sor a paraméter)
 ## 1. feladat
-- Hány nővény van --> lista.Count (tulajdonság)
+- Hány növény van --> lista.Count (tulajdonság)
 ## 2. feladat
 - Milyen gyűjthető részek vannak?
 - Hány darab van ezekből?
+- Adatszerk.: Dictionary<string, int>
+- 1 Milyen gyűjthető részek vannak
+     - Foreach a "novenyek"-en
+     - Ha a rész nem kulcs --> akkor adjuk hozzá 0-val
+- Hány darab van ezekből
+  - Foreach "novenyek"
+  - Ha "Resz" == Key 
 ## 3. feladat
 - Maximum keresés --> Időtartam alapján
+  - maximum változó =0
+  - foreach novenyek
+  - ha max < Idotarta  --> max = Idotartam
 - Nővény(ek) amely(ek) a legtöbb ideig szedhetőek
+  - Foreach novenyek
+  - Kiirni ha Idotartam == max
 ## 4. feladat
 - Időtartam átlag számítás (Összegzés)  
+  - szum változó =0
+  - atlag változó
+  - foreach novenyek
+  - szum += Idotartam
+  - atlag = szum / Count
 
